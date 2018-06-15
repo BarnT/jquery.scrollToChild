@@ -39,7 +39,7 @@
             elemTopPos = $element.offset().top - $scrollPane.offset().top + currentTopPos;
             elemBottomPos = elemTopPos + elemHeight;
             // Scroll only if animation is forced (visibilityBased == false), or if target element is not visible from top to bottom
-            if (!options.visibilityBased || elemBottomPos < currentTopPos || elemTopPos > currentBottomPos || elemBottomPos > currentBottomPos) {
+            if (!options.visibilityBased || elemBottomPos < currentTopPos || elemTopPos > currentBottomPos || elemBottomPos > currentBottomPos || elemTopPos < currentTopPos) {
                 newPos = elemTopPos - options.scrollMargin;
                 newPos = newPos > 0 ? newPos : 0;
                 if (options.noAnim) {
